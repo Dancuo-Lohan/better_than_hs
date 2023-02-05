@@ -1,1 +1,1 @@
-# better_than_hs
+# better_than_hs_server
