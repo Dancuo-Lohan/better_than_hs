@@ -1,7 +1,7 @@
 // #########################################################################
 // #########################################################################
 // #########################################################################
-const GameServer = require('../socket_handler/gameServer');
+const GameServer = require('../socket_handler/GameServer');
 class Client {
     // ######### CONSTRUCTOR #########
     constructor() {

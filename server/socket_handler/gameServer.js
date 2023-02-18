@@ -1,4 +1,4 @@
-const GameMap = require('../generator/map');
+const GameMap = require('../generator/GameMap');
 class GameServer {
     // ######### CONSTRUCTOR #########
     constructor() {

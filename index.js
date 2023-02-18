@@ -1,7 +1,8 @@
 const WebSocket = require('ws');
-const GameServer = require('./server/socket_handler/gameServer');
-const Client = require('./server/socket_handler/client');
+const GameServer = require('./server/socket_handler/GameServer');
+const Client = require('./server/socket_handler/Client');
 const server = new WebSocket.Server({ port: 8080 });
+console.log("[o] | Server on :)")
 
 let players = new Map();
 let gameServers = new Map();
@@ -54,6 +55,11 @@ server.on('connection', function connection(socket) {
                 break;
             case 'generate_map':
                 client.generateMap()
+                break;
+            case 'ping':
+                socket.send(JSON.stringify({
+                    type: 'pong'
+                }))
                 break;
             default:
                 console.error('Message non reconnu reçu du client : ', data);
